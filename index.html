@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Extra Credit Part 2</title>
+    <style type="text/css">
+        body {text-align: left;}
+    </style>
+</head>
+
+<body>
+
+<input type = "checkbox" value = "Check All" id = "all_c"/>
+<label for "all" id = "all_l">Check All</label>
+<br>
+<br>
+<input type = "checkbox" value = "first" id = "first"/>
+<label for "first">first</label>
+<br>
+<input type = "checkbox" value = "second" id = "second"/>
+<label for "second">second</label>
+<br>
+<input type = "checkbox" value = "third" id = "third"/>
+<label for "third">third</label>
+<br>
+<input type = "checkbox" value = "fourth" id = "fourth"/>
+<label for "fourth">fourth</label>
+<br>
+
+
+<script>
+
+all_box = document.getElementById("all_c");
+all_label = document.getElementById("all_l");
+first = document.getElementById("first");
+second = document.getElementById("second");
+third = document.getElementById("third");
+fourth = document.getElementById("fourth");
+
+all_box.onchange = function()
+{
+    if (all_box.checked)
+    {
+        first.checked = true;
+        second.checked = true;
+        third.checked = true;
+        fourth.checked = true;
+        all_label.innerHTML = "Uncheck All";
+    } else if (!all_box.checked)
+    {
+        first.checked = false;
+        second.checked = false;
+        third.checked = false;
+        fourth.checked = false;
+        all_label.innerHTML = "Check All";
+    }
+}
+
+
+</script>
+
+</body>
+
+</html>
